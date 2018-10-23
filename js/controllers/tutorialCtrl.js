@@ -27,7 +27,7 @@ angular.module("tutorialCtrlModule", [])
 
 })
 
-.controller('TutorialCtrl2', [$scope, function($scope){
+.controller('TutorialCtrl2', ['$scope', function($scope){
 
     $scope.secondTutorial = 'This is the Second Page';
 

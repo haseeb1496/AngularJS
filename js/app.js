@@ -9,7 +9,7 @@ app.config(function($routeProvider){
             controller: 'TutorialCtrl'
         })
 
-        .when('#/tutorialSecond', {
+        .when('/tutorialSecond', {
             templateUrl: 'Views/tutorialSecond.html',
             controller: 'TutorialCtrl2'
         })
