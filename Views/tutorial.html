@@ -1,0 +1,20 @@
+<hr />
+<h1>{{tutorialObject.title}}</h1>
+<h2>{{tutorialObject.subtitle}}</h2>
+<p> Number : {{5 + 5}}</p>
+<p> String : {{tutorialObject.firstName + " " + tutorialObject.lastName}}</p>
+<p><b> Binding : {{tutorialObject.bindOutput | currency: "Rs. " : '0'}} </b></p>
+<button ng-click = 'timesTwo()'>Multiply</button>
+
+</br>
+</br>
+
+<label>First Name: </label>
+<input ng-model="tutorialObject.firstName">
+<br/>
+<label>Last Name: </label>
+<input ng-model="tutorialObject.lastName">
+
+</br>
+</br>
+<a href = '#/tutorialSecond'>Tutorial Page 2</a>
