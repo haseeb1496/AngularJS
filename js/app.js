@@ -15,7 +15,9 @@ app.config(function($routeProvider){
         })
 
         .otherwise({
-            redirect:'/'
+            redirect:'/',
+            templateUrl: 'Views/tutorial.html',
+            controller: 'TutorialCtrl'
         });
 
 });
