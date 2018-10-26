@@ -5,6 +5,9 @@
     <ul class = 'list-group'></ul>
         <li ng-repeat="item in items | orderBy:'date'" class="list-group-item text-center clearfix">
             <span style="font-weight: bold">{{item.itemName | uppercase}} </span>
+            <a href = "#!/addItem/edit/{{item.id}}" class="btn btn-sm btn-default float-right">
+                <span class = "text-black-50">Edit</span>
+            </a>
         </li>
     </ul>
 </div>

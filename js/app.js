@@ -14,7 +14,7 @@ app.config(function($routeProvider){
             controller: 'ContainerScope'
         })
 
-        .when('/addItem/:id', {
+        .when('/addItem/edit/:id', {
             templateUrl: 'Views/addItem.html',
             controller: 'ContainerScope'
         })
