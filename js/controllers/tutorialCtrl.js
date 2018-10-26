@@ -1,34 +1,22 @@
-angular.module("tutorialCtrlModule", [])
+angular.module("ControllerModule", [])
 
-.controller('TutorialCtrl', ['$scope', "Calculations", function($scope, Calculations){
+.controller('TitleScope', ['$scope', function($scope){
 
-        $scope.tutorialObject = {};
-        $scope.tutorialObject.title = 'Main Page';
-        $scope.tutorialObject.subtitle = 'Sub Title';
-        $scope.tutorialObject.bindOutput = 20;
-        $scope.tutorialObject.firstName = "Haseeb Ullah";
-        $scope.tutorialObject.lastName = "Usmani";
-        $scope.timesTwo = function() {
-            $scope.tutorialObject.bindOutput = Calculations.timesTwo($scope.tutorialObject.bindOutput);
-        }
+    $scope.Title = 'Grocery List';
 
-    }])
+}])
 
+.controller('ContainerScope', ['$scope', '$routeParams', function($scope, $routeParams){
 
-.factory("Calculations", function (){
+    $scope.items = [
+        {completed: true, itemName: 'Milk', date: '2018-10-12'},
+        {completed: true, itemName: 'Chocolate', date: '2018-10-11'},
+        {completed: true, itemName: 'Bread', date: '2018-10-02'},
+        {completed: true, itemName: 'Yogurt', date: '2018-10-30'},
+        {completed: true, itemName: 'Kit Kat', date: '2018-08-26'},
+        {completed: true, itemName: 'Apples', date: '2018-01-26'},
+    ]
 
-    var calc = {};
-
-    calc.timesTwo = function(a){
-        return a * 2;
-    };
-
-    return calc;
-
-})
-
-.controller('TutorialCtrl2', ['$scope', function($scope){
-
-    $scope.secondTutorial = 'This is the Second Page';
+    $scope.rp = "Route Parameter Value : " + $routeParams.id;
 
 }]);

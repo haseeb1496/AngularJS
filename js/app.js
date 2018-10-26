@@ -1,23 +1,28 @@
-var app = angular.module('Tutorial App', ['ngRoute', 'tutorialCtrlModule']);
+var app = angular.module('Grocery List App', ['ngRoute', 'ControllerModule']);
 
 app.config(function($routeProvider){
 
     $routeProvider
 
         .when('/', {
-            templateUrl: 'Views/tutorial.html',
-            controller: 'TutorialCtrl'
+            templateUrl: 'Views/groceryList.html',
+            controller: 'ContainerScope'
         })
 
-        .when('/tutorialSecond', {
-            templateUrl: 'Views/tutorialSecond.html',
-            controller: 'TutorialCtrl2'
+        .when('/addItem/', {
+            templateUrl: 'Views/addItem.html',
+            controller: 'ContainerScope'
+        })
+
+        .when('/addItem/:id', {
+            templateUrl: 'Views/addItem.html',
+            controller: 'ContainerScope'
         })
 
         .otherwise({
             redirect:'/',
-            templateUrl: 'Views/tutorial.html',
-            controller: 'TutorialCtrl'
+            templateUrl: 'Views/groceryList.html',
+            controller: 'ContainerScope'
         });
 
 });
